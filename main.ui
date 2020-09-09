@@ -2,13 +2,22 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1015</width>
-    <height>607</height>
+    <width>1292</width>
+    <height>839</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>14</pointsize>
+    <italic>true</italic>
+   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -16,15 +25,23 @@
   <property name="autoFillBackground">
    <bool>false</bool>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(62, 62, 62);
+color: rgb(255, 255, 255);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLCDNumber" name="ENC_1_Position">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>30</y>
-      <width>161</width>
-      <height>31</height>
+      <y>40</y>
+      <width>291</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 255, 0);</string>
     </property>
     <property name="digitCount">
      <number>8</number>
@@ -34,10 +51,14 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>150</y>
-      <width>161</width>
-      <height>31</height>
+      <y>280</y>
+      <width>291</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 255, 0);</string>
     </property>
     <property name="digitCount">
      <number>8</number>
@@ -47,10 +68,14 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>90</y>
-      <width>161</width>
-      <height>31</height>
+      <y>160</y>
+      <width>291</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 255, 0);</string>
     </property>
     <property name="digitCount">
      <number>8</number>
@@ -60,10 +85,14 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>210</y>
-      <width>161</width>
-      <height>31</height>
+      <y>400</y>
+      <width>291</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 255, 0);</string>
     </property>
     <property name="digitCount">
      <number>8</number>
@@ -72,24 +101,30 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>10</x>
       <y>0</y>
-      <width>161</width>
+      <width>181</width>
       <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Position A (deg) M&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Position A (deg)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>50</y>
+      <x>10</x>
+      <y>100</y>
       <width>161</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Position B (deg)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -98,11 +133,14 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>110</y>
+      <x>10</x>
+      <y>230</y>
       <width>151</width>
-      <height>51</height>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Position C (deg)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -111,11 +149,14 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>170</y>
+      <x>10</x>
+      <y>350</y>
       <width>161</width>
-      <height>51</height>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Position D (deg)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -125,23 +166,31 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>500</y>
-      <width>161</width>
+      <y>480</y>
+      <width>291</width>
       <height>51</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(126, 83, 255);
+color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
-     <string>Connect</string>
+     <string>Connect OPC UA</string>
     </property>
    </widget>
    <widget class="QLCDNumber" name="Error_Pos_AD">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>150</y>
-      <width>161</width>
-      <height>31</height>
+      <x>300</x>
+      <y>160</y>
+      <width>261</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(255, 0, 0);</string>
     </property>
     <property name="digitCount">
      <number>8</number>
@@ -150,11 +199,14 @@
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>300</x>
       <y>0</y>
       <width>161</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Error A - B (deg)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -163,11 +215,15 @@
    <widget class="QLCDNumber" name="Error_Pos_AB">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>30</y>
-      <width>161</width>
-      <height>31</height>
+      <x>300</x>
+      <y>40</y>
+      <width>261</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(255, 0, 0);</string>
     </property>
     <property name="digitCount">
      <number>8</number>
@@ -176,11 +232,14 @@
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>110</y>
-      <width>151</width>
-      <height>51</height>
+      <x>310</x>
+      <y>240</y>
+      <width>161</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Error A - D (deg)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -189,11 +248,15 @@
    <widget class="QLCDNumber" name="Error_Pos_AC">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>90</y>
-      <width>161</width>
-      <height>31</height>
+      <x>300</x>
+      <y>280</y>
+      <width>261</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(255, 0, 0);</string>
     </property>
     <property name="digitCount">
      <number>8</number>
@@ -202,11 +265,14 @@
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>50</y>
+      <x>300</x>
+      <y>120</y>
       <width>161</width>
-      <height>51</height>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Error A - C (deg)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -216,10 +282,15 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>250</y>
-      <width>101</width>
-      <height>51</height>
+      <y>540</y>
+      <width>131</width>
+      <height>71</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(126, 83, 255);
+color: rgb(255, 255, 255);
+</string>
     </property>
     <property name="text">
      <string>Home A</string>
@@ -228,11 +299,15 @@
    <widget class="QPushButton" name="ConnectToOmronBtn_3">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>300</y>
-      <width>101</width>
-      <height>51</height>
+      <x>160</x>
+      <y>540</y>
+      <width>131</width>
+      <height>71</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(126, 83, 255);
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Home B</string>
@@ -242,10 +317,14 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>350</y>
-      <width>101</width>
-      <height>51</height>
+      <y>620</y>
+      <width>131</width>
+      <height>71</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(126, 83, 255);
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Home C</string>
@@ -254,11 +333,15 @@
    <widget class="QPushButton" name="ConnectToOmronBtn_5">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>400</y>
-      <width>101</width>
-      <height>51</height>
+      <x>160</x>
+      <y>620</y>
+      <width>131</width>
+      <height>71</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(126, 83, 255);
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Home D</string>
@@ -268,67 +351,154 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>450</y>
-      <width>101</width>
-      <height>51</height>
+      <y>700</y>
+      <width>291</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(126, 83, 255);
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Home All</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="EnableControlA">
+   <widget class="QLCDNumber" name="Ferq_lab">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>580</x>
       <y>40</y>
-      <width>70</width>
-      <height>17</height>
+      <width>261</width>
+      <height>181</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>14</pointsize>
+      <family>Ubuntu</family>
+      <pointsize>48</pointsize>
+      <weight>3</weight>
+      <italic>true</italic>
+      <bold>false</bold>
      </font>
     </property>
-    <property name="text">
-     <string>CheckBox</string>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 0, 255);
+font: 25 italic 48pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="digitCount">
+     <number>8</number>
+    </property>
+    <property name="value" stdset="0">
+     <double>20.000000000000000</double>
     </property>
    </widget>
-   <widget class="QCheckBox" name="EnableControlB">
+   <widget class="QPushButton" name="Ferq_plus_minus">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>100</y>
-      <width>70</width>
-      <height>17</height>
+      <x>580</x>
+      <y>230</y>
+      <width>121</width>
+      <height>111</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(126, 83, 255);
+color: rgb(255, 255, 255);
+</string>
     </property>
     <property name="text">
-     <string>CheckBox</string>
+     <string>-</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="EnableControlC">
+   <widget class="QPushButton" name="Ferq_plus_btn">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>160</y>
-      <width>70</width>
-      <height>17</height>
+      <x>720</x>
+      <y>230</y>
+      <width>121</width>
+      <height>111</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(126, 83, 255);
+color: rgb(255, 255, 255);
+</string>
     </property>
     <property name="text">
-     <string>CheckBox</string>
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>0</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ferquency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>40</y>
+      <width>431</width>
+      <height>721</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: qlineargradient(spread:pad, x1:0.502, y1:0.0223636, x2:0.597, y2:0.994318, stop:0 rgba(90, 93, 92, 255), stop:1 rgba(255, 255, 255, 255));</string>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Start_btn">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>620</y>
+      <width>261</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.00878733, y1:0.528045, x2:1, y2:0.545, stop:0 rgba(22, 255, 0, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>START</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Stop_btn">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>620</y>
+      <width>261</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.00878733, y1:0.528045, x2:1, y2:0.545, stop:0 rgba(255, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>STOP</string>
     </property>
    </widget>
   </widget>
@@ -337,8 +507,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1015</width>
-     <height>21</height>
+     <width>1292</width>
+     <height>31</height>
     </rect>
    </property>
   </widget>
