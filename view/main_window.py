@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'main.ui'
+# Form implementation generated from reading ui file 'view/main.ui'
 #
 # Created by: PyQt5 UI code generator 5.14.1
 #
@@ -125,52 +125,92 @@ class Ui_MainWindow(object):
         self.ConnectToOmronBtn_6.setStyleSheet("background-color: rgb(126, 83, 255);\n"
 "color: rgb(255, 255, 255);")
         self.ConnectToOmronBtn_6.setObjectName("ConnectToOmronBtn_6")
-        self.Ferq_lab = QtWidgets.QLCDNumber(self.centralwidget)
-        self.Ferq_lab.setGeometry(QtCore.QRect(580, 40, 261, 181))
+        self.ferq_lab = QtWidgets.QLCDNumber(self.centralwidget)
+        self.ferq_lab.setGeometry(QtCore.QRect(580, 40, 261, 181))
         font = QtGui.QFont()
         font.setFamily("Ubuntu")
         font.setPointSize(48)
         font.setBold(False)
         font.setItalic(True)
         font.setWeight(3)
-        self.Ferq_lab.setFont(font)
-        self.Ferq_lab.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));\n"
+        self.ferq_lab.setFont(font)
+        self.ferq_lab.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));\n"
 "color: rgb(0, 0, 255);\n"
 "font: 25 italic 48pt \"Ubuntu\";")
-        self.Ferq_lab.setDigitCount(8)
-        self.Ferq_lab.setProperty("value", 20.0)
-        self.Ferq_lab.setObjectName("Ferq_lab")
-        self.Ferq_plus_minus = QtWidgets.QPushButton(self.centralwidget)
-        self.Ferq_plus_minus.setGeometry(QtCore.QRect(580, 230, 121, 111))
-        self.Ferq_plus_minus.setStyleSheet("background-color: rgb(126, 83, 255);\n"
+        self.ferq_lab.setDigitCount(8)
+        self.ferq_lab.setProperty("value", 20.0)
+        self.ferq_lab.setObjectName("ferq_lab")
+        self.ferq_decriment_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.ferq_decriment_btn.setGeometry(QtCore.QRect(580, 230, 121, 111))
+        self.ferq_decriment_btn.setStyleSheet("background-color: rgb(126, 83, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "")
-        self.Ferq_plus_minus.setObjectName("Ferq_plus_minus")
-        self.Ferq_plus_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.Ferq_plus_btn.setGeometry(QtCore.QRect(720, 230, 121, 111))
-        self.Ferq_plus_btn.setStyleSheet("background-color: rgb(126, 83, 255);\n"
+        self.ferq_decriment_btn.setObjectName("ferq_decriment_btn")
+        self.ferq_increment_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.ferq_increment_btn.setGeometry(QtCore.QRect(720, 230, 121, 111))
+        self.ferq_increment_btn.setStyleSheet("background-color: rgb(126, 83, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "")
-        self.Ferq_plus_btn.setObjectName("Ferq_plus_btn")
+        self.ferq_increment_btn.setObjectName("ferq_increment_btn")
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
         self.label_6.setGeometry(QtCore.QRect(660, 0, 161, 31))
         self.label_6.setStyleSheet("color: rgb(255, 255, 255);")
         self.label_6.setObjectName("label_6")
-        self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
-        self.textBrowser.setGeometry(QtCore.QRect(850, 40, 431, 721))
-        self.textBrowser.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.log_box = QtWidgets.QTextBrowser(self.centralwidget)
+        self.log_box.setGeometry(QtCore.QRect(850, 40, 431, 721))
+        self.log_box.setStyleSheet("color: rgb(255, 255, 255);\n"
 "background-color: qlineargradient(spread:pad, x1:0.502, y1:0.0223636, x2:0.597, y2:0.994318, stop:0 rgba(90, 93, 92, 255), stop:1 rgba(255, 255, 255, 255));")
-        self.textBrowser.setObjectName("textBrowser")
-        self.Start_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.Start_btn.setGeometry(QtCore.QRect(300, 620, 261, 141))
-        self.Start_btn.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.00878733, y1:0.528045, x2:1, y2:0.545, stop:0 rgba(22, 255, 0, 255), stop:1 rgba(255, 255, 255, 255));\n"
+        self.log_box.setObjectName("log_box")
+        self.start_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.start_btn.setGeometry(QtCore.QRect(300, 620, 261, 141))
+        self.start_btn.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.00878733, y1:0.528045, x2:1, y2:0.545, stop:0 rgba(22, 255, 0, 255), stop:1 rgba(255, 255, 255, 255));\n"
 "color: rgb(0, 0, 0);")
-        self.Start_btn.setObjectName("Start_btn")
-        self.Stop_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.Stop_btn.setGeometry(QtCore.QRect(570, 620, 261, 141))
-        self.Stop_btn.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.00878733, y1:0.528045, x2:1, y2:0.545, stop:0 rgba(255, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));\n"
+        self.start_btn.setObjectName("start_btn")
+        self.stop_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.stop_btn.setGeometry(QtCore.QRect(570, 620, 261, 141))
+        self.stop_btn.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.00878733, y1:0.528045, x2:1, y2:0.545, stop:0 rgba(255, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));\n"
 "color: rgb(255, 255, 255);")
-        self.Stop_btn.setObjectName("Stop_btn")
+        self.stop_btn.setObjectName("stop_btn")
+        self.label_9 = QtWidgets.QLabel(self.centralwidget)
+        self.label_9.setGeometry(QtCore.QRect(300, 360, 181, 31))
+        self.label_9.setStyleSheet("color: rgb(255, 255, 255);")
+        self.label_9.setObjectName("label_9")
+        self.axis_a_vel_box = QtWidgets.QLCDNumber(self.centralwidget)
+        self.axis_a_vel_box.setGeometry(QtCore.QRect(300, 400, 261, 61))
+        self.axis_a_vel_box.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"color: rgb(0, 255, 0);")
+        self.axis_a_vel_box.setDigitCount(8)
+        self.axis_a_vel_box.setObjectName("axis_a_vel_box")
+        self.label_10 = QtWidgets.QLabel(self.centralwidget)
+        self.label_10.setGeometry(QtCore.QRect(570, 360, 181, 31))
+        self.label_10.setStyleSheet("color: rgb(255, 255, 255);")
+        self.label_10.setObjectName("label_10")
+        self.axis_b_vel_box = QtWidgets.QLCDNumber(self.centralwidget)
+        self.axis_b_vel_box.setGeometry(QtCore.QRect(570, 400, 261, 61))
+        self.axis_b_vel_box.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"color: rgb(0, 255, 0);")
+        self.axis_b_vel_box.setDigitCount(8)
+        self.axis_b_vel_box.setObjectName("axis_b_vel_box")
+        self.label_11 = QtWidgets.QLabel(self.centralwidget)
+        self.label_11.setGeometry(QtCore.QRect(300, 480, 181, 31))
+        self.label_11.setStyleSheet("color: rgb(255, 255, 255);")
+        self.label_11.setObjectName("label_11")
+        self.axis_c_vel_box = QtWidgets.QLCDNumber(self.centralwidget)
+        self.axis_c_vel_box.setGeometry(QtCore.QRect(300, 520, 261, 61))
+        self.axis_c_vel_box.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"color: rgb(0, 255, 0);")
+        self.axis_c_vel_box.setDigitCount(8)
+        self.axis_c_vel_box.setObjectName("axis_c_vel_box")
+        self.label_12 = QtWidgets.QLabel(self.centralwidget)
+        self.label_12.setGeometry(QtCore.QRect(570, 480, 181, 31))
+        self.label_12.setStyleSheet("color: rgb(255, 255, 255);")
+        self.label_12.setObjectName("label_12")
+        self.axis_d_vel_box = QtWidgets.QLCDNumber(self.centralwidget)
+        self.axis_d_vel_box.setGeometry(QtCore.QRect(570, 520, 261, 61))
+        self.axis_d_vel_box.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"color: rgb(0, 255, 0);")
+        self.axis_d_vel_box.setDigitCount(8)
+        self.axis_d_vel_box.setObjectName("axis_d_vel_box")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1292, 31))
@@ -199,13 +239,17 @@ class Ui_MainWindow(object):
         self.ConnectToOmronBtn_4.setText(_translate("MainWindow", "Home C"))
         self.ConnectToOmronBtn_5.setText(_translate("MainWindow", "Home D"))
         self.ConnectToOmronBtn_6.setText(_translate("MainWindow", "Home All"))
-        self.Ferq_plus_minus.setText(_translate("MainWindow", "-"))
-        self.Ferq_plus_btn.setText(_translate("MainWindow", "+"))
+        self.ferq_decriment_btn.setText(_translate("MainWindow", "-"))
+        self.ferq_increment_btn.setText(_translate("MainWindow", "+"))
         self.label_6.setText(_translate("MainWindow", "<html><head/><body><p>Ferquency</p></body></html>"))
-        self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.log_box.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Ubuntu\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
-        self.Start_btn.setText(_translate("MainWindow", "START"))
-        self.Stop_btn.setText(_translate("MainWindow", "STOP"))
+        self.start_btn.setText(_translate("MainWindow", "START"))
+        self.stop_btn.setText(_translate("MainWindow", "STOP"))
+        self.label_9.setText(_translate("MainWindow", "<html><head/><body><p>Ferquency<span style=\" font-size:14pt;\"> A (Hz)</span></p></body></html>"))
+        self.label_10.setText(_translate("MainWindow", "<html><head/><body><p>Ferquency<span style=\" font-size:14pt;\"> B (Hz)</span></p></body></html>"))
+        self.label_11.setText(_translate("MainWindow", "<html><head/><body><p>Ferquency<span style=\" font-size:14pt;\"> C (Hz)</span></p></body></html>"))
+        self.label_12.setText(_translate("MainWindow", "<html><head/><body><p>Ferquency<span style=\" font-size:14pt;\"> D (Hz)</span></p></body></html>"))

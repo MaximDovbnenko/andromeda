@@ -364,7 +364,7 @@ color: rgb(255, 255, 255);</string>
      <string>Home All</string>
     </property>
    </widget>
-   <widget class="QLCDNumber" name="Ferq_lab">
+   <widget class="QLCDNumber" name="ferq_lab">
     <property name="geometry">
      <rect>
       <x>580</x>
@@ -394,7 +394,7 @@ font: 25 italic 48pt &quot;Ubuntu&quot;;</string>
      <double>20.000000000000000</double>
     </property>
    </widget>
-   <widget class="QPushButton" name="Ferq_plus_minus">
+   <widget class="QPushButton" name="ferq_decriment_btn">
     <property name="geometry">
      <rect>
       <x>580</x>
@@ -412,7 +412,7 @@ color: rgb(255, 255, 255);
      <string>-</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Ferq_plus_btn">
+   <widget class="QPushButton" name="ferq_increment_btn">
     <property name="geometry">
      <rect>
       <x>720</x>
@@ -446,7 +446,7 @@ color: rgb(255, 255, 255);
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ferquency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser">
+   <widget class="QTextBrowser" name="log_box">
     <property name="geometry">
      <rect>
       <x>850</x>
@@ -467,7 +467,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Start_btn">
+   <widget class="QPushButton" name="start_btn">
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -484,7 +484,7 @@ color: rgb(0, 0, 0);</string>
      <string>START</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Stop_btn">
+   <widget class="QPushButton" name="stop_btn">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -499,6 +499,138 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>STOP</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>360</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ferquency&lt;span style=&quot; font-size:14pt;&quot;&gt; A (Hz)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="axis_a_vel_box">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>400</y>
+      <width>261</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 255, 0);</string>
+    </property>
+    <property name="digitCount">
+     <number>8</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>360</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ferquency&lt;span style=&quot; font-size:14pt;&quot;&gt; B (Hz)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="axis_b_vel_box">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>400</y>
+      <width>261</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 255, 0);</string>
+    </property>
+    <property name="digitCount">
+     <number>8</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>480</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ferquency&lt;span style=&quot; font-size:14pt;&quot;&gt; C (Hz)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="axis_c_vel_box">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>520</y>
+      <width>261</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 255, 0);</string>
+    </property>
+    <property name="digitCount">
+     <number>8</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>480</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ferquency&lt;span style=&quot; font-size:14pt;&quot;&gt; D (Hz)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="axis_d_vel_box">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>520</y>
+      <width>261</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.457014, y1:0.511, x2:1, y2:0.494318, stop:0 rgba(72, 120, 176, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 255, 0);</string>
+    </property>
+    <property name="digitCount">
+     <number>8</number>
     </property>
    </widget>
   </widget>

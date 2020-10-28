@@ -1,34 +1,28 @@
 import sys  # sys нужен для передачи argv в QApplication
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, uic
 from PyQt5.QtCore import QTimer
-import main_window  # Это наш конвертированный файл дизайна
-from opcua import Client
-from opcua import ua
+import view # Это наш конвертированный файл дизайна
+
 import sched, time
 import threading 
-import simulation
-import math
-import random
-import OPCUA_control
+
+import external_devices.controller.omron_nx as Omron
 
 
 
-class ExampleApp(QtWidgets.QMainWindow, main_window.Ui_MainWindow):
-    def __init__(self):
-        # Это здесь нужно для доступа к переменным, методам
-        # и т.д. в файле design.py
-        super().__init__()
-        self.S = False
-        self.Controller = OPCUA_control.OpcUaControl()
-        self.setupUi(self)  # Это нужно для инициализации нашего дизайна
+
+class MainWindow(QtWidgets.QMainWindow):
+    def __init__(self, *args, **kwargs):
+        super(MainWindow, self).__init__(*args, **kwargs)
+        uic.loadUi('view/main.ui', self)
         
-        self.ConnectToOmronBtn.clicked.connect(self.ConnectToOmron)
-        self.ConnectToOmronBtn_2.clicked.connect(self.Start)
-        self.CurrentClient = Client("opc.tcp://192.168.250.1:4840")
+        #self.ConnectToOmronBtn.clicked.connect(self.ConnectToOmron)
+        #self.ConnectToOmronBtn_2.clicked.connect(self.Start)
+    
 
       
        # self.TimerUpdate   = Timer(1, self.UpdateValues)
-
+    '''
     def Start(self):
          self.S = not self.S
          print(self.S)
@@ -48,17 +42,30 @@ class ExampleApp(QtWidgets.QMainWindow, main_window.Ui_MainWindow):
         self.CurrentClient.connect()
         root =  self.CurrentClient.get_root_node()
         pass
+'''
+timer          = QTimer()
+UPDATE_TIME_MS = 50
+import json
+def read_config():
+    try :
+        config_file   = open('config/client_config.json' , 'r')
+        cohfig_data   = config_file.read()
+        return json.loads(cohfig_data)
+    except Exception as e:
+        print(str(e)) 
 
 def main():
-    app = QtWidgets.QApplication(sys.argv)  # Новый экземпляр QApplication
-    window = ExampleApp()  # Создаём объект класса ExampleApp
+      
+    app  = QtWidgets.QApplication(sys.argv) 
+    main           = MainWindow()  
 
-    timer = QTimer()
-    timer.timeout.connect(window.UpdateValues)
-    timer.start(500)
+    cOmron = Omron.omronNx(read_config(), main, UPDATE_TIME_MS)
+    main.ConnectToOmronBtn.clicked.connect(cOmron.connect)
+    timer.timeout.connect(cOmron.update)
+    timer.start(UPDATE_TIME_MS)
 
-    window.show()  # Показываем окно
-    app.exec_()  # и запускаем приложение
+    main.show()  
+    app.exec_()  
 
 if __name__ == '__main__':  # Если мы запускаем файл напрямую, а не импортируем
     main()  # то запускаем функцию main()
