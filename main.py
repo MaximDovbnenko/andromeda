@@ -15,34 +15,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
         uic.loadUi('view/main.ui', self)
-        
-        #self.ConnectToOmronBtn.clicked.connect(self.ConnectToOmron)
-        #self.ConnectToOmronBtn_2.clicked.connect(self.Start)
-    
 
-      
-       # self.TimerUpdate   = Timer(1, self.UpdateValues)
-    '''
-    def Start(self):
-         self.S = not self.S
-         print(self.S)
-         ENC_A = self.CurrentClient.get_node("ns=4;s=Start")
-         ENC_A.set_attribute(ua.AttributeIds.Value, ua.DataValue(not self.S))
-         
-
-    def UpdateValues(self):
-        #self.Sim.Update()
-        objects = self.CurrentClient.get_objects_node()
-        ENC_A = self.CurrentClient.get_node("ns=4;s=N1_Ch1_Encoder_Present_Position")
-        #print(ENC_A.get_value())
-        self.ENC_1_Position.display (ENC_A.get_value())
-
-      
-    def ConnectToOmron(self):
-        self.CurrentClient.connect()
-        root =  self.CurrentClient.get_root_node()
-        pass
-'''
 timer          = QTimer()
 UPDATE_TIME_MS = 50
 import json

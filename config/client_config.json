@@ -1,6 +1,10 @@
 {
     "hardware": {
+        "arduino_bound": 9600,
+        "arduino_port": "/dev/ttyACM0",
         "encoder_scale": 100,
+        "max_limit": 50,
+        "min_limit": 0,
         "vel_scale": 100
     },
     "hardware_addr": {

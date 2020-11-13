@@ -31,7 +31,11 @@ config = {
     },
     "hardware" : {
         "encoder_scale" : 100,
-        "vel_scale"     : 100
+        "vel_scale"     : 100,
+        "arduino_port"  : "/dev/ttyACM0",
+        "arduino_bound" : 9600,
+        "min_limit"     : 0,
+        "max_limit"     : 50
     },
 
     "soft" : {
